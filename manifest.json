@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "PolyPrompt — Folders & Prompts for Every LLM",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Organize your ChatGPT, Claude, Gemini, and Perplexity chats into folders, and reuse the same prompt library across all of them.",
   "author": "Rouhaiseki",
   "homepage_url": "https://github.com/Rouhaiseki/polyprompt",

@@ -11,7 +11,11 @@
       chatList: "[class*='ThreadList'], aside ul",
       chatItem: "[class*='ThreadItem'], aside li",
       chatTitle: "[class*='ThreadItem'] a, aside li a",
-      input: "textarea[placeholder*='Ask'], textarea[aria-label*='Ask']",
+      // Perplexity uses Lexical (a contenteditable div) for its main
+      // input. Older builds also used textareas in places. Listing every
+      // realistic candidate; findInput() picks the last visible one.
+      input:
+        "div[contenteditable='true'][role='textbox'], div.lexical-editor[contenteditable='true'], div[contenteditable='true'].ProseMirror, textarea[placeholder*='Ask'], textarea[aria-label*='Ask'], textarea[placeholder]",
     },
   });
 
