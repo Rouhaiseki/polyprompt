@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>PolyPrompt</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>📁 PolyPrompt</h1>
+      <p class="tagline">Folders &amp; prompts for every LLM</p>
+    </header>
+
+    <section class="block">
+      <div class="block-header">
+        <h2>Folders</h2>
+        <button id="new-folder">＋ New folder</button>
+      </div>
+      <div id="folders" class="list"></div>
+    </section>
+
+    <section class="block">
+      <div class="block-header">
+        <h2>Prompts</h2>
+        <button id="new-prompt">＋ New prompt</button>
+      </div>
+      <input id="search" placeholder="Search prompts…" />
+      <div id="prompts" class="list"></div>
+    </section>
+
+    <footer>
+      <p>
+        Open ChatGPT, Claude, Gemini, or Perplexity to use these prompts in a chat.
+      </p>
+      <p>
+        <a href="https://github.com/Rouhaiseki/polyprompt" target="_blank"
+          >GitHub</a
+        >
+        ·
+        <a href="https://github.com/Rouhaiseki/polyprompt/issues" target="_blank"
+          >Feedback</a
+        >
+      </p>
+    </footer>
+
+    <!-- Prompt editor modal -->
+    <div id="modal-overlay" class="hidden">
+      <div class="modal">
+        <h3 id="modal-title">New prompt</h3>
+        <label
+          >Title<input id="modal-prompt-title" placeholder="e.g. Bug-report rewriter"
+        /></label>
+        <label
+          >Folder
+          <select id="modal-prompt-folder">
+            <option value="">(none)</option>
+          </select>
+        </label>
+        <label
+          >Body<textarea
+            id="modal-prompt-body"
+            rows="8"
+            placeholder="The full prompt text. Use {{var}} for variables (coming soon)."
+          ></textarea>
+        </label>
+        <div class="modal-actions">
+          <button id="modal-cancel" class="secondary">Cancel</button>
+          <button id="modal-save">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../lib/storage.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
