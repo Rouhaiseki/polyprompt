@@ -16,6 +16,8 @@
       // realistic candidate; findInput() picks the last visible one.
       input:
         "div[contenteditable='true'][role='textbox'], div.lexical-editor[contenteditable='true'], div[contenteditable='true'].ProseMirror, textarea[placeholder*='Ask'], textarea[aria-label*='Ask'], textarea[placeholder]",
+      // Lexical ignores execCommand; it needs a synthetic paste event.
+      inputStrategy: "paste",
     },
   });
 
