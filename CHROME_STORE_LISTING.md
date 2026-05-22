@@ -67,9 +67,8 @@ HOW IT WORKS
 ═══════════════════════════════════════════
 PERMISSIONS
 
-- `storage`: stores your folders and prompts locally on your device.
-- `scripting` + `activeTab`: required to insert prompts into the active LLM page.
-- Host permissions for `chatgpt.com`, `claude.ai`, `gemini.google.com`, `www.perplexity.ai`: the panel only appears on these four sites.
+- `storage`: stores your folders and prompts locally on your device. This is the only API permission the extension requests.
+- Host permissions for `chatgpt.com`, `claude.ai`, `gemini.google.com`, `www.perplexity.ai`: the content scripts (declared in the manifest) inject the panel only on these four sites.
 
 PolyPrompt has no other access to any data and makes no network calls of any kind.
 
