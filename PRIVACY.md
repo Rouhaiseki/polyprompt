@@ -35,18 +35,13 @@ device using Chrome's built-in `chrome.storage.local` API. This data:
 ## Permissions explained
 
 `storage` — Lets the extension save your folders and prompts on your
-device.
-
-`scripting` — Required by Chrome's Manifest V3 for content-script injection
-into LLM pages. Used solely to render the PolyPrompt panel and the
-"Insert" button.
-
-`activeTab` — Lets the extension insert your prompt into the current LLM
-tab when you click Insert.
+device via `chrome.storage.local`. This is the only API permission the
+extension requests.
 
 `host_permissions` for `chatgpt.com`, `claude.ai`, `gemini.google.com`,
-`perplexity.ai` — Required for the panel to appear on those specific sites.
-The extension does not run on any other domain.
+`perplexity.ai` — Required for the content scripts (declared in the
+manifest) to inject the PolyPrompt panel on those specific sites. The
+extension does not run on any other domain.
 
 ## Future Pro tier (not yet shipped)
 
